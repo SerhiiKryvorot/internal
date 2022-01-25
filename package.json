@@ -1,0 +1,22 @@
+{
+  "name": "internal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SerhiiKryvorot/internal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SerhiiKryvorot/internal/issues"
+  },
+  "homepage": "https://github.com/SerhiiKryvorot/internal#readme",
+  "devDependencies": {
+    "cypress": "^9.3.1"
+  }
+}
