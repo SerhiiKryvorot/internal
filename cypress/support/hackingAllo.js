@@ -61,4 +61,24 @@ export class HackingAllo {
     assertAmountThreePayments() {
         cy.get('span[class="credit-item__monthly"]').eq(-1).should('contain.text', '11 333 ₴')
     }
+    openCatalog() {
+        cy.get('div[class="mh-catalog-btn"]').contains('Каталог').click()
+    }
+    selectNokia() {
+        cy.get('p[class="item__title arrow-icon"]').contains(' Смартфони та телефони ').trigger('mouseover')
+        cy.get('a[href="https://allo.ua/ua/products/mobile/proizvoditel-nokia/"]').should('be.visible').click({force:true})
+    }
+    compareNokias() {
+        cy.get('div[class="compare"] svg').eq(0).click()
+        cy.get('div[class="compare"] svg').eq(1).click()
+    }
+    openComparison() {
+        cy.get('div[class="mh-actions"] a[href="https://allo.ua/ua/catalog/product_compare/index/"]').click()
+    }
+    assertMadeInChina(china) {
+        cy.get('tr[class="attr-table__tr is-different"]').eq(-2).children('td[class="attr-table__td"]').eq(1)
+            .should('contain', china).and('have.lengthOf', 1)
+        cy.get('tr[class="attr-table__tr is-different"]').eq(-2).children('td[class="attr-table__td"]').eq(2)
+            .should('contain', china).and('have.lengthOf', 1)
+    }
 }

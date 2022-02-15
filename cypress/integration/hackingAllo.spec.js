@@ -47,4 +47,13 @@ describe('manipulations with Allo',()=> {
         alloPage.selectThreePayments()
         alloPage.assertAmountThreePayments()
     })
+    it('Compare Producers', ()=>{
+        alloPage.openCatalog()
+        alloPage.selectNokia()
+        alloPage.compareNokias()
+        alloPage.openComparison()
+        alloPage.assertMadeInChina(
+            data.china
+        )
+    })
 })
