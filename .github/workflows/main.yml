@@ -45,7 +45,7 @@ jobs:
       - name: Run Postman Collection        
         run: |
  
-         newman run https://api.getpostman.com/collections/21513983-a7af4467-584d-4855-8c86-e646390d3356\?apikey\=PMAK-62d56cb7bf6cae2ce70f5b1b-a3daa6119084cd0ed710b8a8f9a4d9b905
+         newman run https://api.getpostman.com/collections/21513983-a7af4467-584d-4855-8c86-e646390d3356\?apikey
      
       # Upload the reports to TestArtifacts directory
       - name: Output the results
